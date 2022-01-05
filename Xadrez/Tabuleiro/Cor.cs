@@ -10,7 +10,7 @@ namespace Xadrez.Tabuleiro
     {
         Branca = 0,
         Preta = 1,
-        Amarela = 2,
+        Ciano = 2,
         Azul = 3,
         Vermelha = 4,
         Verde = 5,

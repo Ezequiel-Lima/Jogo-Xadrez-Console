@@ -12,11 +12,17 @@ namespace Xadrez
     {
         static void Main(string[] args)
         {
+            
+            try
+            {
+                PartidaDeXadrez partidaDeXadrez = new PartidaDeXadrez();
 
-            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
-
-            Console.WriteLine(pos);
-            Console.WriteLine(pos.ToPosicao());
+                Tela.ImprimirTabuleiro(partidaDeXadrez.Tabuleiro);
+            }
+            catch (TabuleiroException error)
+            {
+                Console.WriteLine($"{error.Message}");
+            }
             
             Console.ReadKey();
         }
