@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JogoXadrez\PosicaoXadrez.cs" />
     <Compile Include="JogoXadrez\Rei.cs" />
     <Compile Include="JogoXadrez\Torre.cs" />
     <Compile Include="Program.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Tabuleiro\Peca.cs" />
     <Compile Include="Tabuleiro\Posicao.cs" />
     <Compile Include="Tabuleiro\TabuleiroClass.cs" />
+    <Compile Include="Tabuleiro\TabuleiroException.cs" />
     <Compile Include="Tela.cs" />
   </ItemGroup>
   <ItemGroup>
