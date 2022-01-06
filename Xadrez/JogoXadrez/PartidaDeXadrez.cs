@@ -12,6 +12,7 @@ namespace Xadrez.JogoXadrez
         public TabuleiroClass Tabuleiro { get; private set; }
         private int Turno { get; set; }
         private Cor JogadorAtual { get; set; }
+        public bool Terminada { get; set; }
 
         public PartidaDeXadrez()
         {
@@ -19,12 +20,12 @@ namespace Xadrez.JogoXadrez
             Turno = 1;
             JogadorAtual = Cor.Branca;
             ColocarPecas();
+            Terminada = false;
         }
 
         public void ExecutaMovimento(Posicao origem, Posicao destino)
         {
             Peca peca = Tabuleiro.RetirarPeca(origem);
-            peca.IncrementarQuantidadeMovimento();
             Peca pecaCapturada = Tabuleiro.RetirarPeca(destino);
             Tabuleiro.ColocarPeca(peca, destino);
         }
@@ -33,6 +34,7 @@ namespace Xadrez.JogoXadrez
         {
             Tabuleiro.ColocarPeca(new Torre(Cor.Branca, Tabuleiro), new PosicaoXadrez('a', 1).ToPosicao());
             Tabuleiro.ColocarPeca(new Torre(Cor.Branca, Tabuleiro), new PosicaoXadrez('h', 1).ToPosicao());
+            Tabuleiro.ColocarPeca(new Rei(Cor.Branca, Tabuleiro), new PosicaoXadrez('e', 1).ToPosicao());
 
             Tabuleiro.ColocarPeca(new Torre(Cor.Ciano, Tabuleiro), new PosicaoXadrez('a', 8).ToPosicao());
             Tabuleiro.ColocarPeca(new Torre(Cor.Ciano, Tabuleiro), new PosicaoXadrez('h', 8).ToPosicao());
