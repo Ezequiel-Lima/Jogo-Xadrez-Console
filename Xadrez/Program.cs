@@ -22,9 +22,7 @@ namespace Xadrez
                     try
                     {
                         Console.Clear();
-                        Tela.ImprimirTabuleiro(partidaDeXadrez.Tabuleiro);
-                        Console.WriteLine("\nTurno:" + partidaDeXadrez.Turno);
-                        Console.WriteLine("Aguardando jogada: " + partidaDeXadrez.JogadorAtual);
+                        Tela.ImprimirPartida(partidaDeXadrez);
 
                         Console.Write("Origem: ");
                         Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
